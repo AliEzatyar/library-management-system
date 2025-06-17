@@ -1,12 +1,8 @@
 <?php
 
 class BooksController extends \BaseController {
-
-
 	public function __construct(){
-
 		$this->filter_params = array('category_id');
-
 	}
 
 	/**
@@ -16,7 +12,6 @@ class BooksController extends \BaseController {
 	 */
 	public function index()
 	{
-
 		$book_list = Books::select('book_id','title','author','description','category_id')
 			->orderBy('book_id');
 
@@ -222,26 +217,19 @@ class BooksController extends \BaseController {
 		//
 	}
 
-
     public function renderAddBooks() {
         $db_control = new HomeController();
-
         return View::make('panel.addbook')
             ->with('categories_list', $db_control->categories_list);
     }
-
     public function renderAllBooks() {
         $db_control = new HomeController();
-
 		return View::make('panel.allbook')
             ->with('categories_list', $db_control->categories_list);
     }
-
     public function searchBook(){
     	$db_control = new HomeController();
-
 		return View::make('public.book-search')
 			->with('categories_list', $db_control->categories_list);
     }
-
 }

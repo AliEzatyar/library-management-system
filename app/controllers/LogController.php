@@ -1,21 +1,15 @@
 <?php
 
 class LogController extends \BaseController {
-
 	public function index()
 	{
-
 		$logs = Logs::select('id','book_issue_id','student_id','issued_at')
 			->where('return_time', '=', 0)
-			->orderBy('issued_at', 'DESC');
-		
+			->orderBy('issued_at', 'DESC');	
 		$logs = $logs->get();
-
 		for($i=0; $i<count($logs); $i++){
-	        
 	        $issue_id = $logs[$i]['book_issue_id'];
 	        $student_id = $logs[$i]['student_id'];
-	        
 	        // to get the name of the book from book issue id
 	        $issue = Issue::find($issue_id);
 	        $book_id = $issue->book_id;

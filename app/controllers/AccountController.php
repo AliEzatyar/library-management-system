@@ -2,7 +2,7 @@
 
 class AccountController extends BaseController {
 
-    // Sign In (POST)
+    // Sign In (POST method)
     public function postSignIn() {
         $validator = Validator::make(Input::all(), [
             'username' => 'required',
@@ -29,7 +29,7 @@ class AccountController extends BaseController {
             ->with('global', 'Wrong username or password.');
     }
 
-    // Register User (POST)
+    // Register User (POST method)
     public function postCreate() {
         $validator = Validator::make(Input::all(), [
             'username' => 'required|max:20|min:3|unique:users',
@@ -67,12 +67,12 @@ class AccountController extends BaseController {
             ->with('global', 'Failed to create account.');
     }
 
-    // Sign In Form (GET)
+    // Sign In Form (GET method)
     public function getSignIn() {
         return View::make('account.signin');
     }
 
-    // Create Account Form (GET)
+    // Create Account Form (GET method)
     public function getCreate() {
         return View::make('account.create');
     }
