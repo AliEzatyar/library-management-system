@@ -1,6 +1,8 @@
 @extends('account.index')
 
+
 @section('content')
+
 
 <div class="wrapper">
 	<div class="container">
@@ -61,3 +63,19 @@
     @include('underscore.search_book')
 </script>
 @stop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

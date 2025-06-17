@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,8 +32,11 @@
     @include('account.navigation_bottom')
 
 <script src="{{ Config::get('view.script') }}/jquery-1.9.1.min.js" type="text/javascript"></script>
+
 <script src="{{ Config::get('view.script') }}/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+
 <script src="{{ Config::get('view.bootstrap.js') }}/bootstrap.min.js" type="text/javascript"></script>
+
 <script src="{{ Config::get('view.script') }}/underscore-min.js" type="text/javascript"></script>
 
 <script src="{{ Config::get('view.custom.js') }}/script.common.js" type="text/javascript"></script>
@@ -41,7 +45,9 @@
 
 <script type="text/template" id="alert_box">
     @include('underscore.alert_box')
+
 </script>
 
 </body>
+
 </html>
