@@ -16,4 +16,3 @@ class HomeController extends BaseController {
             ->with('student_categories_list', $this->student_categories_list);
 	}
 }
-#Updated by Ali
