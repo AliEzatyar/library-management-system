@@ -1,4 +1,4 @@
-THis project was made by Ali Abbas Wahidi and Ali Ezatyar.
+THis project was made by Ali Abas Wahidi and Ali Ezatyar.
 
 features:
  + Librarians can be given their authorized login ID and password without which the system can not be accessed.
