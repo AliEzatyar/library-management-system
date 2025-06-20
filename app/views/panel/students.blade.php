@@ -51,8 +51,8 @@
                             <td>{{ $student->first_name }}</td>
                             <td>{{ $student->last_name }}</td>
                             <td>{{ $student->roll_num }}</td>
-                            <td>{{ $student->branch->branch ?? 'N/A' }}</td>
-                            <td>{{ $student->category->category ?? 'N/A' }}</td>
+                            <td>{{ $student->branch->branch }}</td>
+                            <td>{{ $student->category->category }}</td>
                             <td>{{ $student->email_id }}</td>
                             <td>{{ $student->books_issued }}</td>
                         </tr>
