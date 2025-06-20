@@ -45,9 +45,23 @@
                     </tr>
                 </thead>
                 <tbody id="students-table">
-                    <tr class="text-center">
-                        <td colspan="99">Loading...</td>
-                    </tr>
+                    @forelse($students as $student)
+                        <tr>
+                            <td>{{ $student->student_id }}</td>
+                            <td>{{ $student->first_name }}</td>
+                            <td>{{ $student->last_name }}</td>
+                            <td>{{ $student->roll_num }}</td>
+                            <td>{{ $student->branch->branch ?? 'N/A' }}</td>
+                            <td>{{ $student->category->category ?? 'N/A' }}</td>
+                            <td>{{ $student->email_id }}</td>
+                            <td>{{ $student->books_issued }}</td>
+                        </tr>
+                    @empty
+                        <tr class="text-center">
+                            <td colspan="8">No students found</td>
+                        </tr>
+                    @endforelse
+
                 </tbody>
             </table>
         </div>

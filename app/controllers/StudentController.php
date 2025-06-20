@@ -167,9 +167,22 @@ class StudentController extends \BaseController {
 
 	public function renderStudents(){
 		$db_control = new HomeController;
+		$students = Student::select(
+				'student_id',
+				'first_name',
+				'last_name',
+				'category',
+				'roll_num',
+				'branch',
+				'email_id',
+				'books_issued'
+			)
+			->orderBy('student_id')
+			->get();
 		return View::make('panel.students')
 			->with('branch_list', $db_control->branch_list)
-			->with('student_categories_list', $db_control->student_categories_list);
+			->with('student_categories_list', $db_control->student_categories_list)
+			->with("students", $students);
 	}
 
 	public function renderApprovalStudents(){
